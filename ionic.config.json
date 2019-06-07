@@ -1,5 +1,7 @@
 {
   "name": "MeetPack",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

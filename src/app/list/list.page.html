@@ -1,21 +1,27 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar  color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+        {{meeting_docs.data.meeting.title}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class='text-center'>
+      <p>{{meeting_docs.data.meeting.description}}</p>
+      <p>Venue: {{meeting_docs.data.meeting.venue}}</p>
+      <p>Date: {{meeting_docs.data.meeting.mdate}}</p>
+  </div>
   <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
+    <ion-item *ngFor="let doc of meeting_docs.data.meeting.documents" (click)='get_document(doc.id)'>
+      
+      <h6><ion-icon name="document"></ion-icon>{{doc.title}}</h6>
+     <!--<p>{{doc.description}}</p>-->
       <div class="item-note" slot="end">
-        {{item.note}}
+        
       </div>
     </ion-item>
   </ion-list>
