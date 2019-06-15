@@ -8,7 +8,7 @@ import { MenuController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private menuCtrl: MenuController) { 
+  constructor(private menuCtrl: MenuController,public storage: Storage) { 
     menuCtrl.enable(false)
   }
 

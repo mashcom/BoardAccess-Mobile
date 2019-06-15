@@ -4,9 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { Platform, NavController, LoadingController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { IMeeting, MeetingProvider } from 'src/providers/meeting/meeting';
-import { ListPage } from './list/list.page';
-import { FileTransferObject } from '@ionic-native/file-transfer/ngx';
+import { Storage } from '@ionic/storage'
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +13,7 @@ import { FileTransferObject } from '@ionic-native/file-transfer/ngx';
 })
 
 export class AppComponent {
- const
-  ENDPOINT = "http://localhost:8080/laravel/api/public/";
+
   public appPages = [
     {
       title: 'Login',
@@ -43,41 +41,32 @@ login_token:any=[];
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    public http: HttpClient,public navCtrl: NavController,private _meeting_provider: MeetingProvider,private loadingCtrl:LoadingController
+    private nativeStorage: NativeStorage,
+    public http: HttpClient,
+    public navCtrl: NavController,
+    private loadingCtrl:LoadingController,
+    public storage: Storage
   ) {
     this.initializeApp();
-    
-    
-    this._meeting_provider.login().subscribe((data)=>{
-      this.login_token = data;
-      
-      console.log("aUTH")
-       console.log(data);
-
-       this._meeting_provider.get_meetings(this.login_token.access_token).subscribe((data)=>{
-        console.log("Meetings")
-        this.meetings = data;
-        console.log(data);
-      
-      },(error)=>{
-        console.log(error);
-      });
-     },(error)=>{
-       console.log(error);
-       
-     });
-   
-    
-   
   }
-  
 
   initializeApp() {
     this.platform.ready().then(() => {
-     
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+
+  logout(){
+    console.log('logout');
+    this.storage.set('ba_auth', null).then(() => {
+      this.storage.get('ba_auth').then((val) => {
+          if (val == null) {
+            this.navCtrl.navigateRoot('lander');
+          }
+      });
+    });
+
   }
    
 

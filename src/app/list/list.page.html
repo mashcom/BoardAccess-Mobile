@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar  color="primary">
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -10,24 +10,85 @@
 </ion-header>
 
 <ion-content>
-  <div class='text-center'>
+  <div class='text-center'  *ngIf="meeting_docs">
       <p>{{meeting_docs.data.meeting.description}}</p>
+      <p>{{meeting_docs.data.meeting.committee.title}}</p>
       <p>Venue: {{meeting_docs.data.meeting.venue}}</p>
       <p>Date: {{meeting_docs.data.meeting.mdate}}</p>
   </div>
-  <ion-list>
-    <ion-item *ngFor="let doc of meeting_docs.data.meeting.documents" (click)='get_document(doc.id)'>
-      
-      <h6><ion-icon name="document"></ion-icon>{{doc.title}}</h6>
-     <!--<p>{{doc.description}}</p>-->
-      <div class="item-note" slot="end">
-        
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+
+    <ion-card>
+        <ion-card-header>
+            <ion-card-subtitle>Meeting Documents</ion-card-subtitle>
+            <ion-card-title>Documents</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-list *ngIf="meeting_docs">
+                <ion-item *ngFor="let doc of meeting_docs.data.meeting.documents" routerLink="/viewer/{{doc.id}}">
+                    <ion-label class="text-dark">
+                        <p class="font-weight-bold text-dark">{{doc.description}}</p>
+                        <p class="text-dark"><ion-icon name="document"></ion-icon> {{doc.title}}</p>
+                    </ion-label>
+
+                </ion-item>
+            </ion-list>
+            <div *ngIf="!meeting_docs">
+                <div class="ion-padding custom-skeleton">
+                    <ion-list>
+                        <ion-item>
+                            <ion-label>
+                                <h3>
+                                    <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                                </h3>
+                                <p>
+                                    <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+                                </p>
+                                <p>
+                                    <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                                </p>
+                            </ion-label>
+                        </ion-item>
+                    </ion-list>
+                </div>
+            </div>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-subtitle>Committee Members</ion-card-subtitle>
+            <ion-card-title>Members</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <div *ngIf="!meeting_docs">
+                <div class="ion-padding custom-skeleton">
+                    <ion-list>
+                        <ion-item>
+                            <ion-label>
+                                <h3>
+                                    <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                                </h3>
+                                <p>
+                                    <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+                                </p>
+                                <p>
+                                    <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                                </p>
+                            </ion-label>
+                        </ion-item>
+                    </ion-list>
+                </div>
+            </div>
+            <ion-list *ngIf="meeting_docs">
+                <ion-item *ngFor="let member of meeting_docs.data.meeting.committee.members">
+                    <ion-label class="text-dark">
+                        <p class="font-weight-bold text-dark">{{member.member_details.name}}</p>
+                        <p class="text-dark"><ion-icon name="mail"></ion-icon> {{member.member_details.email}}</p>
+                    </ion-label>
+
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
 </ion-content>

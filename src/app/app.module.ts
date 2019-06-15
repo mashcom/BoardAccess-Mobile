@@ -13,6 +13,8 @@ import { MeetingProvider } from 'src/providers/meeting/meeting';
 
 import { File } from '@ionic-native/file/ngx';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +22,7 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
+    IonicStorageModule.forRoot(),
     AppRoutingModule,
     HttpClientModule
   ],
@@ -29,7 +32,8 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     MeetingProvider,
     FileTransfer,
-    File
+    File,
+    NativeStorage
   ],
   bootstrap: [AppComponent]
 })

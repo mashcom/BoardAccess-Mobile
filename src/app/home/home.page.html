@@ -1,23 +1,98 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Meetings
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 <ion-content>
- 
-      <img style="width: 200px;margin-top:5%;" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MDggNTA4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MDggNTA4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGNpcmNsZSBzdHlsZT0iZmlsbDojOTBERkFBOyIgY3g9IjI1NCIgY3k9IjI1NCIgcj0iMjU0Ii8+CjxjaXJjbGUgc3R5bGU9ImZpbGw6IzJDOTk4NDsiIGN4PSIyNTQiIGN5PSIyNTQiIHI9IjE4NCIvPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMTg0LjQsMjE0LjhjMy4yLTgsMi0xNS42LTItMTcuMmMtMC44LTAuNC0yLTAuNC0zLjIsMGMtNC40LDEuMi05LjIsMC44LTEzLjYtMC44bC0xNC44LTUuNiAgIGwtNy42LDE5LjZsMTQuOCw1LjZjNC40LDEuNiw4LjQsNC40LDEwLjgsOC40YzAuNCwwLjgsMS4yLDEuNiwyLjQsMkMxNzUuNiwyMjgsMTgxLjIsMjIyLjgsMTg0LjQsMjE0Ljh6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTE4NC40LDI5Mi40Yy0zLjItOC04LjgtMTMuMi0xMi44LTExLjZjLTAuOCwwLjQtMS42LDEuMi0yLjQsMmMtMi40LDQtNi40LDYuNC0xMC44LDguNGwtMTQuOCw1LjYgICBsNy4yLDE5LjZsMTQuOC01LjZjNC40LTEuNiw5LjItMi40LDEzLjYtMC44YzEuMiwwLjQsMiwwLjQsMy4yLDBDMTg2LjQsMzA4LDE4Ny42LDMwMC40LDE4NC40LDI5Mi40eiIvPgo8L2c+CjxyZWN0IHg9IjM0LjQiIHk9IjIwNS4yIiBzdHlsZT0iZmlsbDojRjlCNTRDOyIgd2lkdGg9IjQ5LjIiIGhlaWdodD0iOTIuOCIvPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiMyQjNCNEU7IiBkPSJNMTcxLjIsMTkzLjJsLTEyLjQsMzEuMmgtMC40Yy0xLjItMC40LTIuNC0wLjgtMy42LTEuMmMwLDAtNDIuNC0xNi44LTQyLjgtMTYuOCAgIGMtMS42LDAtOS42LTQtOS42LDYuOGMwLDAtMS4yLDIxLjYtMiwzMC40aC01MGMxLjYtMTUuMiwxMC40LTU4LDQ4LjQtNjguNGM2LTEuNiwxMi0xLjYsMTgtMC44YzEuNiwwLjQsNTAsMTYuOCw1MCwxNi44ICAgQzE2OC40LDE5MiwxNzAsMTkyLjQsMTcxLjIsMTkzLjJ6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojMkIzQjRFOyIgZD0iTTE2Ny4yLDMxNi40TDE2Ny4yLDMxNi40YzAsMC00OC40LDE2LjgtNTAsMTYuOGMtNiwwLjgtMTIsMC44LTE4LTAuOEM2MC44LDMyMiw1MiwyNzkuMiw1MC40LDI2NCAgIGg1MC40YzAuNCw4LjgsMiwzMC40LDIsMzAuNGMwLDEwLjgsOCw2LjgsOS42LDYuOGMwLjQsMCwzOC44LTE1LjIsNDIuNC0xNi40TDE2Ny4yLDMxNi40eiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGRkQwNUI7IiBkPSJNNDQuOCwyMDguOFYyOTRjMCw3LjYtNi40LDE0LTE0LDE0bDAsMFYxOTQuOGwwLDBDMzguNCwxOTQuOCw0NC44LDIwMS4yLDQ0LjgsMjA4Ljh6Ii8+Cjxwb2x5Z29uIHN0eWxlPSJmaWxsOiMzMjRBNUU7IiBwb2ludHM9IjEwOC44LDI3MC44IDc1LjIsMjkwLjQgNDEuNiwyNzAuOCA0MS42LDIzMiA3NS4yLDIxMi44IDEwOC44LDIzMiAiLz4KPGc+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTMyMy42LDIxNC44Yy0zLjItOC0yLTE1LjYsMi0xNy4yYzAuOC0wLjQsMi0wLjQsMy4yLDBjNC40LDEuMiw5LjIsMC44LDEzLjYtMC44bDE0LjgtNS42bDcuNiwxOS42ICAgbC0xNC44LDUuNmMtNC40LDEuNi04LjQsNC40LTEwLjgsOC40Yy0wLjQsMC44LTEuMiwxLjYtMi40LDJDMzMyLjQsMjI4LDMyNi44LDIyMi44LDMyMy42LDIxNC44eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik0zMjMuNiwyOTIuNGMzLjItOCw4LjgtMTMuMiwxMi44LTExLjZjMC44LDAuNCwxLjYsMS4yLDIuNCwyYzIuNCw0LDYuNCw2LjQsMTAuOCw4LjRsMTQuOCw1LjYgICBsLTcuMiwxOS42bC0xNS4yLTZjLTQuNC0xLjYtOS4yLTIuNC0xMy42LTAuOGMtMS4yLDAuNC0yLDAuNC0zLjIsMEMzMjEuNiwzMDgsMzIwLjQsMzAwLjQsMzIzLjYsMjkyLjR6Ii8+CjwvZz4KPHJlY3QgeD0iNDI0LjQiIHk9IjIwNS4yIiBzdHlsZT0iZmlsbDojRjlCNTRDOyIgd2lkdGg9IjQ5LjIiIGhlaWdodD0iOTIuOCIvPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjcwNTg7IiBkPSJNMzM2LjgsMTkzLjJsMTIuNCwzMS4yaDAuNGMxLjItMC40LDIuNC0wLjgsMy42LTEuMmMwLDAsNDIuNC0xNi44LDQyLjgtMTYuOGMxLjYsMCw5LjYtNCw5LjYsNi44ICAgYzAsMCwxLjIsMjEuNiwyLDMwLjRINDU4Yy0xLjYtMTUuMi0xMC40LTU4LTQ4LjQtNjguNGMtNi0xLjYtMTItMS42LTE4LTAuOGMtMS42LDAuNC01MCwxNi44LTUwLDE2LjggICBDMzM5LjYsMTkyLDMzOCwxOTIuNCwzMzYuOCwxOTMuMnoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjcwNTg7IiBkPSJNMzQwLjgsMzE2LjRMMzQwLjgsMzE2LjRjMCwwLDQ4LjQsMTYuOCw1MCwxNi44YzYsMC44LDEyLDAuOCwxOC0wLjhjMzguNC0xMC44LDQ2LjgtNTMuNiw0OC40LTY4LjQgICBoLTUwLjRjLTAuNCw4LjgtMiwzMC40LTIsMzAuNGMwLDEwLjgtOCw2LjgtOS42LDYuOGMtMC40LDAtMzguOC0xNS4yLTQyLjQtMTYuNEwzNDAuOCwzMTYuNHoiLz4KPC9nPgo8cGF0aCBzdHlsZT0iZmlsbDojRkZEMDVCOyIgZD0iTTQ2My4yLDIwOC44VjI5NGMwLDcuNiw2LjQsMTQsMTQsMTRsMCwwVjE5NC44bDAsMEM0NjkuNiwxOTQuOCw0NjMuMiwyMDEuMiw0NjMuMiwyMDguOHoiLz4KPHBvbHlnb24gc3R5bGU9ImZpbGw6IzMyNEE1RTsiIHBvaW50cz0iMzk5LjIsMjcwLjggNDMyLjgsMjkwLjQgNDY2LjQsMjcwLjggNDY2LjQsMjMyIDQzMi44LDIxMi44IDM5OS4yLDIzMiAiLz4KPGc+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTI5My4yLDE4NC40YzgsMy4yLDE1LjYsMiwxNy4yLTJjMC40LTAuOCwwLjQtMiwwLTMuMmMtMS4yLTQuNC0wLjgtOS4yLDAuOC0xMy42bDUuNi0xNC44ICAgbC0xOS42LTcuNmwtNS42LDE0LjhjLTEuNiw0LjQtNC40LDguNC04LjQsMTAuOGMtMC44LDAuNC0xLjYsMS4yLTIsMi40QzI4MCwxNzUuNiwyODUuMiwxODEuMiwyOTMuMiwxODQuNHoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMjE1LjYsMTg0LjRjOC0zLjIsMTMuMi04LjgsMTEuNi0xMi44Yy0wLjQtMC44LTEuMi0xLjYtMi0yLjRjLTQtMi40LTYuNC02LjQtOC40LTEwLjhsLTUuNi0xNC44ICAgbC0xOS42LDcuMmw1LjYsMTQuOGMxLjYsNC40LDIuNCw5LjIsMC44LDEzLjZjLTAuNCwxLjItMC40LDIsMCwzLjJDMjAwLDE4Ni40LDIwNy42LDE4Ny42LDIxNS42LDE4NC40eiIvPgo8L2c+CjxyZWN0IHg9IjIxMCIgeT0iMzQuNCIgc3R5bGU9ImZpbGw6I0Y5QjU0QzsiIHdpZHRoPSI5Mi44IiBoZWlnaHQ9IjQ5LjIiLz4KPGc+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRTZFOUVFOyIgZD0iTTMxNC44LDE3MS4ybC0zMS4yLTEyLjR2LTAuNGMwLjQtMS4yLDAuOC0yLjQsMS4yLTMuNmMwLDAsMTYuOC00Mi40LDE2LjgtNDIuOGMwLTEuNiw0LTkuNi02LjgtOS42ICAgYzAsMC0yMS42LTEuMi0zMC40LTJ2LTUwYzE1LjIsMS42LDU4LDEwLjQsNjguNCw0OC40YzEuNiw2LDEuNiwxMiwwLjgsMThjLTAuNCwxLjYtMTYuOCw1MC0xNi44LDUwICAgQzMxNiwxNjguNCwzMTUuNiwxNzAsMzE0LjgsMTcxLjJ6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRTZFOUVFOyIgZD0iTTE5MS42LDE2Ny4yTDE5MS42LDE2Ny4yYzAsMC0xNi44LTQ4LjQtMTYuOC01MGMtMC44LTYtMC44LTEyLDAuOC0xOCAgIGMxMC44LTM4LjQsNTMuNi00Ni44LDY4LjQtNDguNHY1MC40Yy04LjgsMC40LTMwLjQsMi0zMC40LDJjLTEwLjgsMC02LjgsOC02LjgsOS42YzAsMC40LDE1LjIsMzguOCwxNi40LDQyLjRMMTkxLjYsMTY3LjJ6Ii8+CjwvZz4KPHBhdGggc3R5bGU9ImZpbGw6I0ZGRDA1QjsiIGQ9Ik0yOTkuMiw0NC44SDIxNGMtNy42LDAtMTQtNi40LTE0LTE0bDAsMGgxMTIuOGwwLDBDMzEzLjIsMzguNCwzMDYuOCw0NC44LDI5OS4yLDQ0Ljh6Ii8+Cjxwb2x5Z29uIHN0eWxlPSJmaWxsOiMzMjRBNUU7IiBwb2ludHM9IjIzNy4yLDEwOC44IDIxNy42LDc1LjIgMjM3LjIsNDEuNiAyNzYsNDEuNiAyOTUuMiw3NS4yIDI3NiwxMDguOCAiLz4KPGc+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTI5My4yLDMyMy42YzgtMy4yLDE1LjYtMiwxNy4yLDJjMC40LDAuOCwwLjQsMiwwLDMuMmMtMS4yLDQuNC0wLjgsOS4yLDAuOCwxMy42bDUuNiwxNC44ICAgbC0xOS42LDcuNmwtNS42LTE0LjhjLTEuNi00LjQtNC40LTguNC04LjQtMTAuOGMtMC44LTAuNC0xLjYtMS4yLTItMi40QzI4MCwzMzIuNCwyODUuMiwzMjYuOCwyOTMuMiwzMjMuNnoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMjE1LjYsMzIzLjZjOCwzLjIsMTMuMiw4LjgsMTEuNiwxMi44Yy0wLjQsMC44LTEuMiwxLjYtMiwyLjRjLTQsMi40LTYuNCw2LjQtOC40LDEwLjhsLTUuNiwxNC44ICAgbC0xOS42LTcuMmw1LjYtMTQuOGMxLjYtNC40LDIuNC05LjIsMC44LTEzLjZjLTAuNC0xLjItMC40LTIsMC0zLjJDMjAwLDMyMS42LDIwNy42LDMyMC40LDIxNS42LDMyMy42eiIvPgo8L2c+CjxyZWN0IHg9IjIxMCIgeT0iNDI0LjQiIHN0eWxlPSJmaWxsOiNGOUI1NEM7IiB3aWR0aD0iOTIuOCIgaGVpZ2h0PSI0OS4yIi8+CjxnPgoJPHBhdGggc3R5bGU9ImZpbGw6IzJCM0I0RTsiIGQ9Ik0zMTQuOCwzMzYuOGwtMzEuMiwxMi40djAuNGMwLjQsMS4yLDAuOCwyLjQsMS4yLDMuNmMwLDAsMTYuOCw0Mi40LDE2LjgsNDIuOGMwLDEuNiw0LDkuNi02LjgsOS42ICAgYzAsMC0yMS42LDEuMi0zMC40LDJWNDU4YzE1LjItMS42LDU4LTEwLjQsNjguNC00OC40YzEuNi02LDEuNi0xMiwwLjgtMThjLTAuNC0xLjYtMTYuOC01MC0xNi44LTUwICAgQzMxNiwzMzkuNiwzMTUuNiwzMzgsMzE0LjgsMzM2Ljh6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojMkIzQjRFOyIgZD0iTTE5MS42LDM0MC44TDE5MS42LDM0MC44YzAsMC0xNi44LDQ4LjQtMTYuOCw1MGMtMC44LDYtMC44LDEyLDAuOCwxOCAgIGMxMC44LDM4LjQsNTMuNiw0Ni44LDY4LjQsNDguNHYtNTAuNGMtOC44LTAuNC0zMC40LTItMzAuNC0yYy0xMC44LDAtNi44LTgtNi44LTkuNmMwLTAuNCwxNS4yLTM4LjgsMTYuNC00Mi40TDE5MS42LDM0MC44eiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGRkQwNUI7IiBkPSJNMjk5LjIsNDYzLjJIMjE0Yy03LjYsMC0xNCw2LjQtMTQsMTRsMCwwaDExMi44bDAsMEMzMTMuMiw0NjkuNiwzMDYuOCw0NjMuMiwyOTkuMiw0NjMuMnoiLz4KPHBvbHlnb24gc3R5bGU9ImZpbGw6IzMyNEE1RTsiIHBvaW50cz0iMjM3LjIsMzk5LjIgMjE3LjYsNDMyLjggMjM3LjIsNDY2LjQgMjc2LDQ2Ni40IDI5NS4yLDQzMi44IDI3NiwzOTkuMiAiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <h1>Welcome to MeetingPack</h1>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Select a meeting from the side menu to get started.</p>
-      </ion-card-content>
-    
-  
+    <ion-refresher slot="fixed" (ionRefresh)="get_user_meetings($event)">
+            <ion-refresher-content
+            pullingText="Pull to refresh"
+            refreshingText="Refreshing...">
+          </ion-refresher-content>
+    </ion-refresher>
+   
+    <ion-list *ngIf="meetings">
+        <ion-item routerLink="/list/{{meeting.id}}" *ngFor="let meeting of meetings.data" class="font-weight-bold">
+            <p>{{meeting.title}}</p>
+            <ion-badge slot="end" color="dark">{{meeting.document_count}} Docs</ion-badge>
+        </ion-item>
+    </ion-list>
+
+    <div *ngIf="!meetings">
+        <div class="ion-padding custom-skeleton">
+            <ion-list>
+                <ion-item>
+                    <ion-label>
+                        <h3>
+                            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                        </h3>
+                        <p>
+                            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+                        </p>
+                        <p>
+                            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                        </p>
+                    </ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>
+                        <h3>
+                            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                        </h3>
+                        <p>
+                            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+                        </p>
+                        <p>
+                            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                        </p>
+                    </ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>
+                        <h3>
+                            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                        </h3>
+                        <p>
+                            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+                        </p>
+                        <p>
+                            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                        </p>
+                    </ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>
+                        <h3>
+                            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                        </h3>
+                        <p>
+                            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+                        </p>
+                        <p>
+                            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                        </p>
+                    </ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>
+                        <h3>
+                            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                        </h3>
+                        <p>
+                            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+                        </p>
+                        <p>
+                            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                        </p>
+                    </ion-label>
+                </ion-item>
+            </ion-list>
+        </div>
+    </div>
+
 </ion-content>
