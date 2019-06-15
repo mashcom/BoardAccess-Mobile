@@ -56,7 +56,7 @@ export class ViewerPage implements OnInit {
                 
             },(error) => {
               console.log(error);
-            },null,httpOptions);
+            });
 
       })
 
